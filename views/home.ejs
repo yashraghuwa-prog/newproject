@@ -1,4 +1,3 @@
-```ejs
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +8,11 @@
 
 <body>
 
-    <%- include('./partials/nav') %>
-
     <div class="container mt-3">
 
         <% blogs.forEach(blog => { %>
 
-            <div class="card mb-3" style="width: 18rem;">
+            <div class="card" style="width: 18rem;">
 
                 <img
                     src="<%= blog.coverImageUrl %>"
@@ -33,7 +30,7 @@
                         href="/blog/<%= blog._id %>"
                         class="btn btn-primary"
                     >
-                        View Blog
+                        view
                     </a>
 
                 </div>
@@ -44,9 +41,6 @@
 
     </div>
 
-    <%- include('./partials/scripts') %>
-
 </body>
 
 </html>
-```
