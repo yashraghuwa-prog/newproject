@@ -45,7 +45,7 @@ userSchema.pre("save", function() {
     const salt = randomBytes(16).toString("hex");
 
     const hashedPassword = createHmac("sha256", salt)
-        .update(password)
+        .update(user.password)
         .digest("hex");
 
     this.salt = salt;
